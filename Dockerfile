@@ -1,7 +1,7 @@
 FROM centos:7
 
-RUN curl -fsSL https://get.docker.com/ | sh && \
-    yum -y install systemd-sysv && \
+RUN yum -y install systemd-sysv curl wget && \
+    curl -fsSL https://get.docker.com/ | sh && \
     systemctl enable docker && \
     yum clean all
 
