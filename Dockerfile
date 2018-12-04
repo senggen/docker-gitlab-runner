@@ -8,7 +8,8 @@ RUN apk add --update \
 		ca-certificates \
 		git \
 		openssl \
-		wget
+		wget \
+		curl
 
 RUN wget -O /usr/bin/gitlab-ci-multi-runner https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-linux-amd64 && \
 	chmod +x /usr/bin/gitlab-ci-multi-runner && \
